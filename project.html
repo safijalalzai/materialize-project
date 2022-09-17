@@ -1,0 +1,396 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!-- font awesome  for social icons-->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.0.13/css/all.css"
+      integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
+      crossorigin="anonymous"
+    />
+    <!--Import Google Icon Font-->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <!-- Compiled and minified CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css"
+    />
+    <style>
+      /* header {
+        color: orange;
+      } */
+      /* .input-field {
+        border-bottom: 3px solid #fff;
+      }
+      
+      .nav-search {
+        background: #fdf2e9;
+      } */
+      /* .nav-wrapper input {
+        background-color: #fff;
+      }
+      input ::placeholder {
+        color: #fff;
+      } */
+      .margin-right {
+        margin-right: 0.8rem;
+      }
+      .margin-left {
+        margin-left: 3.2rem;
+      }
+      .border-radius {
+        border-radius: 16px;
+      }
+      .padding {
+        padding: 2rem;
+      }
+      .card .card-content {
+        padding-top: 14px;
+      }
+      .galary-heading {
+        margin-top: 1rem;
+        font-size: 1.6rem;
+      }
+      .category-margin {
+        margin-right: 3rem;
+      }
+      .galary-box-padding {
+        padding-right: 1.6rem !important;
+        padding-left: 1.6rem !important;
+      }
+      /* login */
+      .modal {
+        padding: 3rem 8rem;
+      }
+      /* galary */
+      .galary-border-radius {
+        border-radius: 5px;
+        overflow: hidden;
+      }
+
+      /* cards */
+      .card-border-radius {
+        border-radius: 9px;
+        overflow: hidden;
+      }
+      .card-section-heading {
+        margin-left: 1rem;
+      }
+      /* ---color
+  primary: #e67e22
+  Tints:#fdf2e9;
+  shades: #cf711f */
+    </style>
+    <title>Photo Ninja</title>
+  </head>
+  <body>
+    <header>
+      <nav class="nav-wrapper transparent">
+        <div class="container">
+          <a href="#" class="brand-logo grey-text text-darken-4">Ploranzai</a>
+        </div>
+      </nav>
+      <nav class="nav-wrapper orange darken-2">
+        <div class="container">
+          <a
+            href="#"
+            class="sidenav-trigger hide-on-med-and-up"
+            data-target="mobile-menu"
+          >
+            <i class="material-icons">menu</i>
+          </a>
+          <div class="row">
+            <div class="col s10 m8 l9 valign-wrapper">
+              <i class="material-icons margin-right">search</i>
+              <input
+                class="nav-search"
+                type="search"
+                placeholder="search item"
+              />
+              <a href="#" class="btn orange darken-4 margin-left border-radius">
+                Search</a
+              >
+            </div>
+            <ul class="right hide-on-small-and-down">
+              <li><a href="#signup" class="modal-trigger">Sigin up</a></li>
+              <li><a href="#login" class="modal-trigger">Sigin In</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <ul class="sidenav orange darken-3" id="mobile-menu">
+        <li><a href="#">Sigin up</a></li>
+        <li><a href="#">Sigin In</a></li>
+      </ul>
+    </header>
+    <div class="modal orange lighten-4" id="login">
+      <div class="modal-content login-padding">
+        <h3 class="center">SIGHN IN</h3>
+        <div class="input-field">
+          <i class="material-icons prefix">email</i>
+          <input class="login-email" type="email" />
+          <label for="login-email">Email</label>
+        </div>
+        <div class="input-field">
+          <i class="material-icons prefix">password</i>
+          <input class="login-password" type="password" />
+          <label for="login-password">password</label>
+        </div>
+        <div class="input-field center">
+          <button class="btn orange darken-3 "><a href="#">Login</a></button>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal orange lighten-4" id="signup">
+      <div class="modal-content login-padding">
+        <h3 class="center">SIGHN UP</h3>
+        <div class="row">
+          <div class="col l6">
+              <div class="input-field">
+                  <i class="material-icons prefix">person</i>
+                  <input class="name" type="text" />
+                  <label for="name">Name</label>
+                </div>
+          </div>
+          <div class="col s6">
+              <div class="input-field">
+                  <i class="material-icons prefix">person</i>
+                  
+                  <input class="lastName" type="text" />
+                  <label for="lastName">Last Name</label>
+                </div>
+          </div>
+        </div>
+        <div class="input-field">
+          <i class="material-icons prefix">email</i>
+          <input class="signup-email" type="email" />
+          <label for="signup-email">Email</label>
+        </div>
+        <div class="input-field">
+          <i class="material-icons prefix">password</i>
+          <input class="signup-password" type="password" />
+          <label for="signup-password">password</label>
+        </div>
+        <div class="input-field">
+          <i class="material-icons prefix">password</i>
+          <input class="signupConfirm-password" type="password" />
+          <label for="signupConfirm-password">Confirm password</label>
+        </div>
+        <div class="input-field center">
+          <button class="btn orange darken-3 "><a href="#">sigin Up</a></button>
+        </div>
+      </div>
+    </div>
+    <main class="container grey lighten-4 section padding">
+      <div class="row">
+        <div class="col s8 l4 white category-margin">
+          <h6>Site info</h6>
+          <ul>
+            <li>
+              <a class="grey-text" href="#">contects</a>
+            </li>
+            <li>
+              <a class="grey-text" href="#">About</a>
+            </li>
+            <li>
+              <a class="grey-text" href="#">more info</a>
+            </li>
+          </ul>
+          <h6>All Cattegories</h6>
+          <ul>
+            <li>
+              <a class="grey-text" href="#">Cars</a>
+            </li>
+            <li>
+              <a class="grey-text" href="#">Furniture</a>
+            </li>
+            <li>
+              <a class="grey-text" href="#">Mobile</a>
+            </li>
+            <li>
+              <a class="grey-text" href="#">Headphone</a>
+            </li>
+            <li>
+              <a class="grey-text" href="#">Cars</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col s4 l7 orange lighten-4 margin-left galary-box-padding">
+          <div><h4 grey-text class="galary-heading">Galary</h4></div>
+          <div class="row">
+            <div class="col s4 l4">
+              <div class="card z-depth-3 galary-border-radius">
+                <div class="card-img">
+                  <img src="img/gallery-1.jpg" alt="" class="responsive-img" />
+                </div>
+                <div class="card-content">
+                  <span class="card-title">will kepted</span>
+                  <p class=" grey-text truncate">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit sit
+                    amet consectetur, adipisicing elit
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col s4 l4">
+              <div class="card z-depth-3 galary-border-radius">
+                <div class="card-img">
+                  <img src="img/gallery-3.jpg" alt="" class="responsive-img" />
+                </div>
+                <div class="card-content">
+                  <span class="card-title truncate">Large condominim</span>
+                  <p class=" grey-text truncate">
+                    Kandahar
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col s4 l4">
+              <div class="card z-depth-3 galary-border-radius">
+                <div class="card-img">
+                  <img src="img/gallery-4.jpg" alt="" class="responsive-img" />
+                </div>
+                <div class="card-content">
+                  <span class="card-title">corvette</span>
+                  <p class=" greytext truncate">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit sit
+                    amet consectetur, adipisicing elit
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="row">
+          <div>
+            <h4 class="card-section-heading">Items</h4>
+          </div>
+          <div class="col s4 l3">
+            <div class="card z-depth-3 card-border-radius">
+              <div class="card-img">
+                <img src="img/gallery-6.jpg" alt="" class="responsive-img" />
+              </div>
+              <div class="card-content">
+                <span class="card-title">Morning Food</span>
+                <p class="truncate">
+                  consectetur, adipisicing elit sit amet consectetur,
+                  adipisicing elit
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col s4 l3">
+            <div class="card z-depth-3 card-border-radius">
+              <div class="card-img">
+                <img src="img/gallery-7.jpg" alt="" class="responsive-img" />
+              </div>
+              <div class="card-content">
+                <span class="card-title">Lunch Food</span>
+                <p class="truncate">
+                  sit amet consectetur, adipisicing elit
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col s4 l3">
+            <div class="card z-depth-3 card-border-radius">
+              <div class="card-img">
+                <img src="img/gallery-8.jpg" alt="" class="responsive-img" />
+              </div>
+              <div class="card-content">
+                <span class="card-title">Evening Food</span>
+                <p class="truncate">
+                  sit amet consectetur, adipisicing elit
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col s4 l3">
+            <div class="card z-depth-3 card-border-radius">
+              <div class="card-img">
+                <img src="img/gallery-9.jpg" alt="" class="responsive-img" />
+              </div>
+              <div class="card-content">
+                <span class="card-title">Child Food</span>
+                <p class="truncate">
+                  consectetur, adipisicing elit
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col s4 l3">
+            <div class="card z-depth-3 card-border-radius">
+              <div class="card-img">
+                <img src="img/gallery-10.jpg" alt="" class="responsive-img" />
+              </div>
+              <div class="card-content">
+                <span class="card-title">Eegimens Food</span>
+                <p class="truncate">
+                  Well for yours health
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col s4 l3">
+            <div class="card z-depth-3 card-border-radius">
+              <div class="card-img">
+                <img src="img/gallery-11.jpg" alt="" class="responsive-img" />
+              </div>
+              <div class="card-content">
+                <span class="card-title">Will kepted</span>
+                <p class="truncate">
+                  sit amet consectetur, adipisicing elit
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col s4 l3">
+            <div class="card z-depth-3 card-border-radius">
+              <div class="card-img">
+                <img src="img/gallery-12.jpg" alt="" class="responsive-img" />
+              </div>
+              <div class="card-content">
+                <span class="card-title">Vacations Food</span>
+                <p class="truncate">
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit sit
+                  amet consectetur, adipisicing elit
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col s4 l3">
+            <div class="card z-depth-4 card-border-radius">
+              <div class="card-img">
+                <img src="img/gallery-1.jpg" alt="" class="responsive-img" />
+              </div>
+              <div class="card-content">
+                <span class="card-title">will kepted</span>
+                <p class="truncate">
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit sit
+                  amet consectetur, adipisicing elit
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+    <script>
+      $(document).ready(function() {
+        $(".sidenav").sidenav();
+        $(".modal").modal();
+      });
+    </script>
+  </body>
+</html>
