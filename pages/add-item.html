@@ -1,0 +1,231 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!-- font awesome  for social icons-->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.0.13/css/all.css"
+      integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
+      crossorigin="anonymous"
+    />
+    <!--Import Google Icon Font-->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <!-- Compiled and minified CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css"
+    />
+    <style>
+      /* main container padding */
+      .main-container{
+        padding: 0.1rem 2rem;
+      }
+      .nav-heading{
+        margin: 0 2rem;
+
+      }
+
+      /* select input field  transparentcy*/
+      select{
+        display: inline;
+      }
+      /* margin top of radio input */
+      .input-margin-top{
+        margin-top: 2.2rem;
+      }
+      .form-padding{
+      padding: 2rem;
+      }
+      /* footer list margin-bottom */
+      footer li{
+        margin-bottom: 1rem;
+      }
+      footer li i{
+        margin-right: 1rem;
+      }
+
+      
+      /* ---color
+  primary: #e67e22
+  Tints:#fdf2e9;
+  shades: #cf711f */
+    </style>
+    <title>Add Item</title>
+  </head>
+  <body class="grey lighten-4">
+    <header>
+      
+      <nav class="navwrapper transparent">
+        <div class="container">
+          <a href="#" class="brand-logo grey-text  text-darken-2 center">ploranzai</a>
+        </div>
+        </nav>
+        <nav class="navwrapper orange darken-2">
+          <div class="container">
+              <h3 class="nav-heading">Add Item</h3>
+          </div>
+        </nav>
+    </header>
+
+    <main class="container main-container white">
+      <form class="add-item" action="">
+        <fieldset class="form-padding">
+          <legend class="grey-text">Product Registeration</legend>
+          <div class="row">
+            <legend class="grey-text">Product Datials</legend>
+
+            <div class="input-field col l4 offset-l1 ">
+              <input type="text" id="product-name" class="">
+              <label for="product-name">Product Name</label>
+            </div>
+
+            <div class="input-field col l4 offset-l2 " >
+              <select>
+                <option  value="" disabled selected>Select Category</option>
+                <option value="1">Cars</option>
+                <option value="2">Furnatures</option>
+                <option value="3">cloths</option>
+              </select>
+            </div>
+          </div>
+          <div class="row">
+              <div class="input-field col l2 offset-l1">
+                  <input type="number" id="product-price">
+                  <label for="product-price">Price</label>
+                </div>
+                <div class="col l4 offset-l1 input-margin-top">
+                    
+                        <label>
+                          <input name="time-use" type="radio" checked />
+                          <span>New</span>
+                        </label>
+                      
+                      
+                        <label>
+                          <input name="time-use" type="radio" />
+                          <span>Old</span>
+                        </label>
+                      
+                </div>
+                
+          </div>
+          <div class="row">
+              <div class="input-field col l1 offset-l1 ">
+                  <input type="number" id="product-quantity">
+                  <label for="product-quantity">Quantity</label>
+              </div>
+              <div class="input-field col l2 offset-l1 ">
+                  <input type="text" id="register-date" class="datepicker">
+                  <label for="register-date">Register Date</label>
+              </div>
+              <div class="input-field col l2 offset-l1 ">
+                  <input type="text" id="expire-date" class="datepicker">
+                  <label for="expire-date">Expire Date</label>
+              </div>
+          </div>
+
+          <div class="row">
+            <legend class="grey-text">Product Address</legend>
+            <div class="input-field col l3 offset-l1">
+              <select>
+                <option value="">Select Area</option>
+                <option value="1">south Zone</option>
+                <option value="2">North Zone</option>
+                <option value="3">easth Zone</option>
+              </select>
+            </div>
+            <div class="input-field col l3 offset-l1">
+              <select>
+                <option value="">Select Provice</option>
+                <option value="1">Kandahar</option>
+                <option value="2">Kabul</option>
+                <option value="2">Herat</option>
+                <option value="2">Jalalabad</option>
+              </select>
+            </div>
+            <div class="input-field col l3 offset-l1">
+              <select>
+                <option value="">Select District</option>
+                <option value="1">Andar</option>
+                <option value="2">Karabagh</option>
+                <option value="2">Dand</option>
+                <option value="2">Arghandab</option>
+              </select>
+            </div>
+            
+              
+            </div>
+
+          </div>
+          <div class="input-field right margin-right">
+            <button class="btn-large orange darken-3">Register</button>
+            
+          </div>
+
+
+        </fieldset>
+        
+
+      </form>
+     
+
+     
+    </main>
+    <footer class="page-footer grey">
+        <div class="container">
+          <div class="row">
+            <div class="col 12 m6">
+              <h4>Contects</h4>
+              <ul>
+                <li>
+                  <a href="#" class="white-text valign-wrapper"><i class="material-icons white-text">facebook</i> Facebook </a>
+                </li>
+                <li>
+                  <a href="#" class="white-text valign-wrapper"><i class="material-icons white-text">phone</i>Phone </a>
+                </li>
+                <li>
+                  <a href="#" class="white-text valign-wrapper"><i class="material-icons white-text">email</i> email </a>
+                </li>
+              </ul>
+            </div>
+            <div class="col s12 m6">
+              <h4>About Us</h4>
+              <ul>
+                <li>
+                  <a href="#" class="white-text">Customers Relationship</a>
+                </li>
+                <li>
+                  <a href="#" class="white-text">Secure buy and sell</a>
+                </li>
+                <li>
+                  <a href="#" class="white-text">User freindly</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="footer-copyright grey">
+          <div class="container center-align">
+              &copy; 2022 Ploranzai.com
+          </div>
+  
+        </div>
+  
+      </footer>
+      
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+    <script>
+      $(document).ready(function(){
+        $(".datepicker").datepicker();
+      });
+    </script>
+  </body>
+</html>

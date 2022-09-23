@@ -37,6 +37,9 @@
       input ::placeholder {
         color: #fff;
       } */
+      .margin-top-down{
+        margin: 2rem;
+      }
       .margin-right {
         margin-right: 0.8rem;
       }
@@ -45,6 +48,9 @@
       }
       .border-radius {
         border-radius: 16px;
+      }
+      .border-radius-small{
+        border-radius: 9px;
       }
       .padding {
         padding: 2rem;
@@ -59,9 +65,49 @@
       .category-margin {
         margin-right: 3rem;
       }
+      .margin-left-small {
+        margin-left: 2rem;
+      }
       .galary-box-padding {
         padding-right: 1.6rem !important;
         padding-left: 1.6rem !important;
+      }
+      .margin-top{
+        margin-top: 7.5px;
+      }
+      /* nav */
+      select {
+        display: inline;
+        margin-top: 13px;
+        background: transparent;
+        border: none;
+        border-radius: 9px;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+        height: 2.5rem;
+      }
+      .sidenav select{
+        border-radius: 9px;
+      }
+
+
+      .nav-wrapper .input-field input[type="search"] {
+        margin-top: 13px;
+        height: 2.5rem;
+        padding-left: 1rem;
+        width: auto;
+        border-radius: 9px;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+      }
+      .sidenav .input-field input[type="search"] {
+        border-radius: 9px;
+        padding-left: 14px;
+        height: 2.5rem;
+        width: 15.1rem;
+      }
+      .margin{
+        margin: 0 2rem;
       }
       /* login */
       .modal {
@@ -81,51 +127,144 @@
       .card-section-heading {
         margin-left: 1rem;
       }
+      /* footer list margin-bottom */
+      footer li{
+        margin-bottom: 1rem;
+      }
+      footer li i{
+        margin-right: 1rem;
+      }
+      /* .footer-li-margin-bottom{
+        margin-bottom: 1rem;
+      } */
       /* ---color
   primary: #e67e22
   Tints:#fdf2e9;
   shades: #cf711f */
     </style>
-    <title>Photo Ninja</title>
+    <title>Ploranzai</title>
   </head>
   <body>
     <header>
       <nav class="nav-wrapper transparent">
         <div class="container">
+          <a href="#" class="sidenav-trigger" data-target="register-menu"><i class="material-icons orange-text text-darken-3">person</i></a>
           <a href="#" class="brand-logo grey-text text-darken-4">Ploranzai</a>
+          <ul class="right hide-on-med-and-down">
+            <li><a href="#signup" class=" btn orange modal-trigger">Sigin up</a></li>
+            <li><a href="#login" class=" btn orange modal-trigger">Sigin In</a></li>
+          </ul>
         </div>
       </nav>
+      <ul class="sidenav" id="register-menu">
+          <li><a href="#signup" class=" btn orange modal-trigger">Sigin up</a></li>
+          <li><a href="#login" class=" btn orange modal-trigger">Sigin In</a></li>
+        </ul>
       <nav class="nav-wrapper orange darken-2">
         <div class="container">
           <a
             href="#"
-            class="sidenav-trigger hide-on-med-and-up"
+            class="sidenav-trigger hide-on-large-only"
             data-target="mobile-menu"
           >
             <i class="material-icons">menu</i>
           </a>
+          <a href="#" class="sidenav-trigger hide-on-med-and-up right" data-target="mobile-search"><i class="material-icons">search</i></a>
           <div class="row">
-            <div class="col s10 m8 l9 valign-wrapper">
-              <i class="material-icons margin-right">search</i>
-              <input
-                class="nav-search"
-                type="search"
-                placeholder="search item"
-              />
-              <a href="#" class="btn orange darken-4 margin-left border-radius">
+            <div class="col s6 m7 l4 valign-wrapper hide-on-small-only">
+              <div class="input-field ">
+                <input
+                  class="nav-search orange lighten-4 l1"
+                  type="search"
+                  placeholder="search item"
+                />
+              </div>
+              <div class="input-field">
+                <select class="orange lighten-4">
+                  <option value="" disabled selected>Categories</option>
+                  <option value="1">cars</option>
+                  <option value="1">cloth</option>
+                  <option value="1">furnature</option>
+                  <option value="1">Mobile</option>
+                </select>
+              </div>
+            </div>
+            <div class="col s4 m5 l4 valign-wrapper hide-on-med-and-down">
+
+              <div class="input-field l1">
+                  <input
+                  class="nav-search orange lighten-4 border-radius-small"
+                  type="search"
+                  placeholder="search item"
+                />
+              </div>
+              
+              <div class="input-field l1">
+                <select class="orange lighten-4 ">
+                  <option value="" disabled selected>Distance</option>
+                  <option value="1">1km</option>
+                  <option value="5">5km</option>
+                  <option value="10">10km</option>
+                  <option value="12">12km</option>
+                </select>
+              </div>
+            </div>
+            <div class="col s4 m1 l1 valign-wrapper margin-top hide-on-small-only">
+              <a href="#" class="btn orange darken-4  border-radius margin-top">
                 Search</a
               >
             </div>
-            <ul class="right hide-on-small-and-down">
-              <li><a href="#signup" class="modal-trigger">Sigin up</a></li>
-              <li><a href="#login" class="modal-trigger">Sigin In</a></li>
+            <ul class="right hide-on-med-and-down">
+              <li><a href="pages/add-item.html"  class="">Add Item</a></li>
+              <li><a href="pages/mine.html" class="btn-floating orange darken-4"><i class="material-icons">person</i></a></li>
             </ul>
           </div>
         </div>
       </nav>
       <ul class="sidenav orange darken-3" id="mobile-menu">
-        <li><a href="#">Sigin up</a></li>
-        <li><a href="#">Sigin In</a></li>
+        <li><a href="pages/add-item.html" class="">Add Item</a></li>
+        <li><a href="pages/mine.html" class="">Mine</a></li>
+      </ul ‌‌‌‌‌>
+      <ul class="sidenav orange darken-3" id="mobile-search">
+        <li class="margin">‌<div class="input-field ">
+          <input
+            class="nav-search orange lighten-4 "
+            type="search"
+            placeholder="search item"
+          />
+        </div>
+        <div class="input-field">
+          <select class="orange lighten-4">
+            <option value="" disabled selected>Categories</option>
+            <option value="1">cars</option>
+            <option value="1">cloth</option>
+            <option value="1">furnature</option>
+            <option value="1">Mobile</option>
+          </select>
+        </div>
+      </li >
+        <li class="margin">‌<div class="input-field">
+          <input
+          class="nav-search orange lighten-4 border-radius-small"
+          type="search"
+          placeholder="search item"
+        />
+      </div>
+      
+      <div class="input-field">
+        <select class="orange lighten-4 ">
+          <option value="" disabled selected>Distance</option>
+          <option value="1">1km</option>
+          <option value="5">5km</option>
+          <option value="10">10km</option>
+          <option value="12">12km</option>
+        </select>
+      </div></li>
+        <li class="margin">
+            <a href="#" class="btn orange darken-4  border-radius margin-top">
+                Search</a
+              > 
+          ‌</li>
       </ul>
     </header>
     <div class="modal orange lighten-4" id="login">
@@ -133,14 +272,16 @@
         <h3 class="center">SIGHN IN</h3>
         <div class="input-field">
           <i class="material-icons prefix">email</i>
-          <input class="login-email" type="email" />
+          <input id="login-email" type="email" />
           <label for="login-email">Email</label>
         </div>
         <div class="input-field">
           <i class="material-icons prefix">password</i>
-          <input class="login-password" type="password" />
+          <input id="login-password" type="email" />
           <label for="login-password">password</label>
         </div>
+        
+        
         <div class="input-field center">
           <button class="btn orange darken-3 "><a href="#">Login</a></button>
         </div>
@@ -151,35 +292,35 @@
       <div class="modal-content login-padding">
         <h3 class="center">SIGHN UP</h3>
         <div class="row">
-          <div class="col l6">
-              <div class="input-field">
-                  <i class="material-icons prefix">person</i>
-                  <input class="name" type="text" />
-                  <label for="name">Name</label>
-                </div>
+          <div class="col s9 l6">
+            <div class="input-field">
+              <i class="material-icons prefix">person</i>
+              <input id="name" type="text" />
+              <label for="name">Name</label>
+            </div>
           </div>
-          <div class="col s6">
-              <div class="input-field">
-                  <i class="material-icons prefix">person</i>
-                  
-                  <input class="lastName" type="text" />
-                  <label for="lastName">Last Name</label>
-                </div>
+          <div class="col s9 l6">
+            <div class="input-field">
+              <i class="material-icons prefix">person</i>
+
+              <input id="lastName" type="text" />
+              <label for="lastName">Last Name</label>
+            </div>
           </div>
         </div>
         <div class="input-field">
           <i class="material-icons prefix">email</i>
-          <input class="signup-email" type="email" />
+          <input id="signup-email" type="email" />
           <label for="signup-email">Email</label>
         </div>
         <div class="input-field">
           <i class="material-icons prefix">password</i>
-          <input class="signup-password" type="password" />
+          <input id="signup-password" type="password" />
           <label for="signup-password">password</label>
         </div>
         <div class="input-field">
           <i class="material-icons prefix">password</i>
-          <input class="signupConfirm-password" type="password" />
+          <input id="signupConfirm-password" type="password" />
           <label for="signupConfirm-password">Confirm password</label>
         </div>
         <div class="input-field center">
@@ -189,80 +330,114 @@
     </div>
     <main class="container grey lighten-4 section padding">
       <div class="row">
-        <div class="col s8 l4 white category-margin">
+        <div class="col s10 m3 white">
           <h6>Site info</h6>
-          <ul>
-            <li>
-              <a class="grey-text" href="#">contects</a>
-            </li>
-            <li>
-              <a class="grey-text" href="#">About</a>
-            </li>
-            <li>
-              <a class="grey-text" href="#">more info</a>
-            </li>
+          <ul class="collection">
+            
+              <a class="collection-item grey-text" href="#">contects</a>
+            
+              <a class="collection-item grey-text" href="#">About</a>
+          
+            
+              <a class="collection-item grey-text" href="#">more info</a>
+           
           </ul>
           <h6>All Cattegories</h6>
-          <ul>
-            <li>
-              <a class="grey-text" href="#">Cars</a>
-            </li>
-            <li>
-              <a class="grey-text" href="#">Furniture</a>
-            </li>
-            <li>
-              <a class="grey-text" href="#">Mobile</a>
-            </li>
-            <li>
-              <a class="grey-text" href="#">Headphone</a>
-            </li>
-            <li>
-              <a class="grey-text" href="#">Cars</a>
-            </li>
+          <ul class="collection">
+            
+              <a class="collection-item grey-text" href="#">Cars</a>
+            
+              <a class="collection-item grey-text" href="#">Furniture</a>
+           
+              <a class="collection-item grey-text" href="#">Mobile</a>
+           
+              <a class="collection-item grey-text" href="#">Headphone</a>
+           
+              <a class="collection-item grey-text" href="#">Cars</a>
+            
           </ul>
         </div>
-        <div class="col s4 l7 orange lighten-4 margin-left galary-box-padding">
+        <div class="col s12 m9 orange lighten-4 galary-box-padding">
           <div><h4 grey-text class="galary-heading">Galary</h4></div>
           <div class="row">
-            <div class="col s4 l4">
-              <div class="card z-depth-3 galary-border-radius">
+            <div class="col s6 m6 l4">
+              <div class="card  z-depth-3 galary-border-radius">
                 <div class="card-img">
-                  <img src="img/gallery-1.jpg" alt="" class="responsive-img" />
+                  <img src="img/gallery-1.jpg" alt="" class="activator responsive-img" />
                 </div>
                 <div class="card-content">
-                  <span class="card-title">will kepted</span>
+                  <span class="card-title activator truncate">will kepted </span>
                   <p class=" grey-text truncate">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit sit
+                    amet consectetur, adipisicing elit
+                  </p>
+                </div>
+                <div class="card-reveal">
+                    <div class="card-title activator"><i class="material-icons right">close</i></div>
+                  <span class="card-title activator truncate">will kepted </span>
+                  <p class=" grey-text">
                     Lorem ipsum dolor sit amet consectetur, adipisicing elit sit
                     amet consectetur, adipisicing elit
                   </p>
                 </div>
               </div>
             </div>
-            <div class="col s4 l4">
+
+            <div class="col s6 m6 l4">
               <div class="card z-depth-3 galary-border-radius">
                 <div class="card-img">
-                  <img src="img/gallery-3.jpg" alt="" class="responsive-img" />
+                  <img src="img/gallery-3.jpg" alt="" class="activator responsive-img" />
                 </div>
                 <div class="card-content">
-                  <span class="card-title truncate">Large condominim</span>
+                  <span class=" card-title activator truncate">Large condominim </span>
                   <p class=" grey-text truncate">
                     Kandahar
                   </p>
                 </div>
+                <div class="card-reveal">
+                  <div class="card-title activator"><i class="material-icons right">close</i></div>
+                  <span class="card-title">Large </span>
+                  <p class=" grey-text">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quis iusto doloribus delectus culpa esse officia.
+                  </p>
+                </div>
               </div>
             </div>
-            <div class="col s4 l4">
+
+            <div class="col s6 m6 l4">
               <div class="card z-depth-3 galary-border-radius">
-                <div class="card-img">
-                  <img src="img/gallery-4.jpg" alt="" class="responsive-img" />
+                <div class="card-img activator">
+                  <img src="img/gallery-11.jpg" alt="" class="activator responsive-img" />
                 </div>
                 <div class="card-content">
-                  <span class="card-title">corvette</span>
+                  <span class=" activator card-title truncate">Large condominim</span>
+                  <p class=" grey-text truncate">
+                    Kabul
+                  </p>
+                </div>
+                <div class="card-reveal">
+                    <div class="card-title activator"><i class="material-icons right">close</i></div>
+                    <span class=" activator card-title truncate">Large</span>
+                    <p class=" grey-text">
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quis iusto doloribus delectus culpa esse officia.
+                    </p>
+
+                </div>
+              </div>
+            </div>
+            <div class="col s6 m6 l4 hide-on-large-only">
+              <div class="card z-depth-3 galary-border-radius">
+                <div class="card-img">
+                  <img src="img/gallery-4.jpg" alt="" class=" activator responsive-img" />
+                </div>
+                <div class="card-content">
+                  <span class="activator card-title truncate">corvette</span>
                   <p class=" greytext truncate">
                     Lorem ipsum dolor sit amet consectetur, adipisicing elit sit
                     amet consectetur, adipisicing elit
                   </p>
                 </div>
+
               </div>
             </div>
           </div>
@@ -273,116 +448,238 @@
           <div>
             <h4 class="card-section-heading">Items</h4>
           </div>
-          <div class="col s4 l3">
+          <div class="col s6 m4 l3">
             <div class="card z-depth-3 card-border-radius">
               <div class="card-img">
-                <img src="img/gallery-6.jpg" alt="" class="responsive-img" />
+                <img src="img/gallery-6.jpg" alt="" class="activator responsive-img" />
               </div>
               <div class="card-content">
-                <span class="card-title">Morning Food</span>
+                <span class="card-title activator truncate">Morning Food</span>
+                <p>Price: <strong>$</strong>150</p>
                 <p class="truncate">
                   consectetur, adipisicing elit sit amet consectetur,
                   adipisicing elit
                 </p>
               </div>
+              <div class="card-reveal">
+                  <div class="card-title activator"><i class="material-icons right">close</i></div>
+                  <span class="activator card-title truncate">Morning Food </span>
+                  <p>Price: <strong>$</strong>150</p>
+                  <p class="">
+                    consectetur, adipisicing elit sit amet consectetur,
+                    adipisicing elit
+                  </p>
+              </div>
             </div>
           </div>
-          <div class="col s4 l3">
+          <div class="col s6 m4 l3">
             <div class="card z-depth-3 card-border-radius">
               <div class="card-img">
-                <img src="img/gallery-7.jpg" alt="" class="responsive-img" />
+                <img src="img/gallery-7.jpg" alt="" class="activator responsive-img" />
               </div>
               <div class="card-content">
-                <span class="card-title">Lunch Food</span>
+                <span class="card-title truncate activator">Lunch Food</span>
+                <p>Price: <strong>$</strong>100</p>
                 <p class="truncate">
+                  Jalalabad
+                </p>
+              </div>
+              <div class="card-reveal">
+                <div class="card-title activator"><i class="material-icons right">close</i></div>
+                <span class="card-title truncate activator">Lunch Food</span>
+                <p>Price: <strong>$</strong>100</p>
+                <p>
+                  consectetur, adipisicing elit sit amet consectetur,
+                    adipisicing elit
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col s6 m4 l3">
+            <div class="card z-depth-3 card-border-radius">
+              <div class="card-img">
+                <img src="img/gallery-8.jpg" alt="" class="activator responsive-img" />
+              </div>
+              <div class="card-content">
+                <span class="card-title truncate activator">Evening Food</span>
+                <p>Price: <strong>$</strong>100</p>
+                <p class="truncate">
+                  Ghazani
+                </p>
+              </div>
+              <div class="card-reveal">
+                  <div class="card-title activator"><i class="material-icons right">close</i></div>
+                  <span class="card-title activator">Evening Food</span>
+                  <p>Price: <strong>$</strong>100</p>
+                <p>
                   sit amet consectetur, adipisicing elit
+                  a;kdf;kd kldnf
                 </p>
               </div>
             </div>
           </div>
-          <div class="col s4 l3">
+          <div class="col s6 m4 l3">
             <div class="card z-depth-3 card-border-radius">
               <div class="card-img">
-                <img src="img/gallery-8.jpg" alt="" class="responsive-img" />
+                <img src="img/gallery-9.jpg" alt="" class="activator responsive-img" />
               </div>
               <div class="card-content">
-                <span class="card-title">Evening Food</span>
+                <span class="card-title truncate activator">Child Food</span>
+                <p>Price: <strong>$</strong>100</p>
                 <p class="truncate">
-                  sit amet consectetur, adipisicing elit
+                  Laghman
                 </p>
+              </div>
+              <div class="card-reveal">
+                  <div class="card-title activator"><i class="material-icons right">close</i></div>
+                  <span class="card-title truncate activator">Child Food</span>
+                  <p>Price: <strong>$</strong>100</p>
+                  <p>
+                      sit amet consectetur, adipisicing elit
+                      a;kdf;kd kldnf
+                  </p>
+
               </div>
             </div>
           </div>
-          <div class="col s4 l3">
+          <div class="col s6 m4 l3">
             <div class="card z-depth-3 card-border-radius">
               <div class="card-img">
-                <img src="img/gallery-9.jpg" alt="" class="responsive-img" />
+                <img src="img/gallery-10.jpg" alt="" class="activator responsive-img" />
               </div>
               <div class="card-content">
-                <span class="card-title">Child Food</span>
+                <span class="card-title truncate activator">Eegimens Food</span>
+                <p>Price: <strong>$</strong>100</p>
                 <p class="truncate">
-                  consectetur, adipisicing elit
+                  Herat
                 </p>
+              </div>
+              <div class="card-reveal">
+                  <div class="card-title activator"><i class="material-icons right">close</i></div>
+                  <span class="card-title truncate activator">Eegimens Food</span>
+                  <p>Price: <strong>$</strong>100</p>
+                  <p>
+                    Well for yours health sit amet consectetur, adipisicing elit
+                    a;kdf;kd kldnf
+                  </p>
               </div>
             </div>
           </div>
-          <div class="col s4 l3">
+          <div class="col s6 m4 l3">
             <div class="card z-depth-3 card-border-radius">
               <div class="card-img">
-                <img src="img/gallery-10.jpg" alt="" class="responsive-img" />
+                <img src="img/gallery-11.jpg" alt="" class="activator responsive-img" />
               </div>
               <div class="card-content">
-                <span class="card-title">Eegimens Food</span>
+                <span class="card-title truncate activator">Will kepted</span>
+                <p>Price: <strong>$</strong>100</p>
                 <p class="truncate">
-                  Well for yours health
+                  Wardak
                 </p>
+              </div>
+              <div class="card-reveal">
+                  <div class="card-title activator"><i class="material-icons right">close</i></div>
+                  <span class="card-title truncate activator">Will kepted</span>
+                  <p>Price: <strong>$</strong>100</p>
+                  <p>
+                      Well for yours health sit amet consectetur, adipisicing elit
+                      a;kdf;kd kldnf
+                    
+                  </p>
+
               </div>
             </div>
           </div>
-          <div class="col s4 l3">
+          <div class="col s6 m4 l3">
             <div class="card z-depth-3 card-border-radius">
               <div class="card-img">
-                <img src="img/gallery-11.jpg" alt="" class="responsive-img" />
+                <img src="img/gallery-12.jpg" alt="" class="activator responsive-img" />
               </div>
               <div class="card-content">
-                <span class="card-title">Will kepted</span>
+                <span class="card-title truncate activator">Vacations Food</span>
+                <p>Price: <strong>$</strong>100</p>
                 <p class="truncate">
-                  sit amet consectetur, adipisicing elit
+                  Bamaian
                 </p>
+              </div>
+              <div class="card-reveal">
+                  <div class="card-title activator"><i class="material-icons right">close</i></div>
+                  <span class="card-title activator">Vacations Food</span>
+                  <p>Price: <strong>$</strong>100</p>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit sit
+                    amet consectetur, adipisicing elit
+                  </p>
               </div>
             </div>
           </div>
-          <div class="col s4 l3">
-            <div class="card z-depth-3 card-border-radius">
-              <div class="card-img">
-                <img src="img/gallery-12.jpg" alt="" class="responsive-img" />
-              </div>
-              <div class="card-content">
-                <span class="card-title">Vacations Food</span>
-                <p class="truncate">
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit sit
-                  amet consectetur, adipisicing elit
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col s4 l3">
+          <div class="col s6 m4 l3">
             <div class="card z-depth-4 card-border-radius">
-              <div class="card-img">
-                <img src="img/gallery-1.jpg" alt="" class="responsive-img" />
+              <div class="card-img activator">
+                <img src="img/gallery-1.jpg" alt="" class="activator responsive-img" />
               </div>
               <div class="card-content">
-                <span class="card-title">will kepted</span>
+                <span class="card-title truncate activator">will kepted</span>
+                <p>Price: <strong>$</strong>100</p>
                 <p class="truncate">
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit sit
-                  amet consectetur, adipisicing elit
+                  Mazar Sharif
                 </p>
+              </div>
+              <div class="card-reveal">
+                  <div class="card-title activator"><i class="material-icons right">close</i></div>
+                  <span class="card-title truncate activator">will kepted</span>
+                  <p>Price: <strong>$</strong>100</p>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit sit
+                    amet consectetur, adipisicing elit
+                  </p>
               </div>
             </div>
           </div>
         </div>
       </div>
     </main>
+    <footer class="page-footer grey">
+      <div class="container">
+        <div class="row">
+          <div class="col 12 m6">
+            <h4>Contects</h4>
+            <ul>
+              <li>
+                <a href="#" class="white-text valign-wrapper"><i class="material-icons white-text">facebook</i> Facebook </a>
+              </li>
+              <li>
+                <a href="#" class="white-text valign-wrapper"><i class="material-icons white-text">phone</i>Phone </a>
+              </li>
+              <li>
+                <a href="#" class="white-text valign-wrapper"><i class="material-icons white-text">email</i> email </a>
+              </li>
+            </ul>
+          </div>
+          <div class="col s12 m6">
+            <h4>About Us</h4>
+            <ul>
+              <li>
+                <a href="#" class="white-text">Customers Relationship</a>
+              </li>
+              <li>
+                <a href="#" class="white-text">Secure buy and sell</a>
+              </li>
+              <li>
+                <a href="#" class="white-text">User freindly</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer-copyright grey">
+        <div class="container center-align">
+            &copy; 2022 Ploranzai.com
+        </div>
+
+      </div>
+
+    </footer>
     <!-- Compiled and minified JavaScript -->
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
